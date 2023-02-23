@@ -26,5 +26,10 @@ namespace Examen.U1
         {
 
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

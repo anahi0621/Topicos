@@ -128,7 +128,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.AliceBlue;
+            this.pictureBox1.BackColor = System.Drawing.Color.Azure;
             this.pictureBox1.Image = global::Examen.U1.Properties.Resources._2_banner_height_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(289, 382);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
