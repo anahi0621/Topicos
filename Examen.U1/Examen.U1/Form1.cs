@@ -28,5 +28,10 @@ namespace Examen.U1
             Citas citas = new Citas();
             citas.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

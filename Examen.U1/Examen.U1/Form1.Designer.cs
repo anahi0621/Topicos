@@ -41,6 +41,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.button1.Location = new System.Drawing.Point(9, 10);
@@ -54,6 +55,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.button2.Location = new System.Drawing.Point(164, 10);
@@ -67,6 +69,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.button3.Location = new System.Drawing.Point(318, 10);
@@ -76,10 +79,12 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.button4.Location = new System.Drawing.Point(9, 344);
@@ -94,6 +99,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.button5.Location = new System.Drawing.Point(164, 177);
@@ -107,6 +113,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.button6.Location = new System.Drawing.Point(9, 177);
@@ -140,8 +147,11 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

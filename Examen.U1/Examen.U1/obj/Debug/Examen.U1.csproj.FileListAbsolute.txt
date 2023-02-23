@@ -11,3 +11,15 @@ C:\Users\DELL\source\repos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.exe
 C:\Users\DELL\source\repos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.pdb
 C:\Users\DELL\source\repos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.Pacientes.resources
 C:\Users\DELL\source\repos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.Citas.resources
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\bin\Debug\Examen.U1.exe.config
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\bin\Debug\Examen.U1.exe
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\bin\Debug\Examen.U1.pdb
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.csproj.AssemblyReference.cache
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.Citas.resources
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.Form1.resources
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.Pacientes.resources
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.Properties.Resources.resources
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.csproj.GenerateResource.cache
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.csproj.CoreCompileInputs.cache
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.exe
+C:\Users\roman\Source\Repos\Topicos\Examen.U1\Examen.U1\obj\Debug\Examen.U1.pdb
