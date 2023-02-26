@@ -10,21 +10,45 @@ using System.Windows.Forms;
 
 namespace Examen.U1
 {
-    public partial class Citas : Form
+    public partial class frmCitas : Form
     {
-        public Citas()
+        //instancia del formulario principal
+        frmPrincipal frmPrincipal;
+
+        public frmCitas()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ControlarCerradoFormulario("Button");
+        }
+
+        private void frmCitas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ControlarCerradoFormulario("FormClosing");
+        }
+
+        private void ControlarCerradoFormulario(string forma)
+        {
+            if (forma == "Button")
+            {
+                this.Close();
+            }else if(forma == "FormClosing")
+            {
+
+            }
+
+            frmPrincipal = new frmPrincipal();
+            frmPrincipal.Show();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

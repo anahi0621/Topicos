@@ -10,28 +10,43 @@ using System.Windows.Forms;
 
 namespace Examen.U1
 {
-    public partial class Form1 : Form
+    public partial class frmPrincipal : Form
     {
-        public Form1()
+        //instancias de formularios hijos
+        frmPacientes frmPacientes;
+        frmCitas frmCitas;
+
+        public frmPrincipal()
         {
             InitializeComponent();
+
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnPacientes_Click(object sender, EventArgs e)
         {
-            Pacientes pacientes = new Pacientes();
-            pacientes.ShowDialog();
+            this.Hide();
+
+            frmPacientes = new frmPacientes();
+            frmPacientes.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnCitas_Click(object sender, EventArgs e)
         {
-            Citas citas = new Citas();
-            citas.ShowDialog();
+            this.Hide();
+
+            frmCitas = new frmCitas();
+            frmCitas.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
+
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
