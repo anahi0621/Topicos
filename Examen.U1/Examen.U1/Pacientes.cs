@@ -231,5 +231,52 @@ namespace Examen.U1
             
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (entradaDatos[0] == 1 && entradaDatos[1] == 1 && entradaDatos[2] == 1 && entradaDatos[3] == 1)
+            {
+                dtgvRegistros.Rows.Add(txtboxCodigo.Text, txtboxNombre.Text, txtboxEdad.Text, cmbDiagnostico.Text);
+            }
+            else
+            {
+                MessageBox.Show("INGRESE CORRECTAMENTE LA INFORMACION SOLICITADA ANTES DE AGREGARLA");
+            }
+            
+        }
+        
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            CalcularPromedioEdad(dtgvRegistros.Rows.Count);
+        }
+
+        private void CalcularPromedioEdad(int cantidadRegistros)
+        {
+            int suma = 0;
+
+            for (int i = 0; i < cantidadRegistros; ++i)
+            {
+                suma += Convert.ToInt32(dtgvRegistros.Rows[i].Cells[2].Value);
+            }
+
+            int promedio = suma / cantidadRegistros;
+
+            lblPromedio.Text = "Promedio: " + Convert.ToString(promedio);
+        }
+
+        private void btnVerOcultar_Click(object sender, EventArgs e)
+        {
+            if(btnVerOcultar.Text == "Ver")
+            {
+                btnVerOcultar.Text = "Ocultar";
+                dtgvRegistros.Visible = true;
+                lblPromedio.Visible = true;
+            }
+            else if(btnVerOcultar.Text == "Ocultar")
+            {
+                btnVerOcultar.Text = "Ver";
+                dtgvRegistros.Visible = false;
+                lblPromedio.Visible = false;
+            }
+        }
     }
 }
