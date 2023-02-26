@@ -29,17 +29,61 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
+            this.grdp = new Plantilla.GradientPanel();
+            this.btnNosotros = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMedical = new System.Windows.Forms.Button();
+            this.btnCitas = new System.Windows.Forms.Button();
             this.btnAcerca = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnCitas = new System.Windows.Forms.Button();
-            this.btnNosotros = new System.Windows.Forms.Button();
             this.btnPacientes = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.grdp = new Plantilla.GradientPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grdp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // grdp
+            // 
+            this.grdp.BackColor = System.Drawing.Color.Transparent;
+            this.grdp.ColorButtom = System.Drawing.Color.LightCyan;
+            this.grdp.ColorTop = System.Drawing.Color.MidnightBlue;
+            this.grdp.Controls.Add(this.btnNosotros);
+            this.grdp.Controls.Add(this.pictureBox1);
+            this.grdp.Controls.Add(this.btnMedical);
+            this.grdp.Controls.Add(this.btnCitas);
+            this.grdp.Controls.Add(this.btnAcerca);
+            this.grdp.Controls.Add(this.btnSalir);
+            this.grdp.Controls.Add(this.btnPacientes);
+            this.grdp.Location = new System.Drawing.Point(-1, -1);
+            this.grdp.Name = "grdp";
+            this.grdp.Size = new System.Drawing.Size(800, 550);
+            this.grdp.TabIndex = 7;
+            // 
+            // btnNosotros
+            // 
+            this.btnNosotros.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnNosotros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNosotros.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNosotros.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnNosotros.Location = new System.Drawing.Point(288, 180);
+            this.btnNosotros.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNosotros.Name = "btnNosotros";
+            this.btnNosotros.Size = new System.Drawing.Size(150, 162);
+            this.btnNosotros.TabIndex = 4;
+            this.btnNosotros.Text = "Nosotros";
+            this.btnNosotros.UseVisualStyleBackColor = false;
+            this.btnNosotros.Click += new System.EventHandler(this.btnNosotros_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.AliceBlue;
+            this.pictureBox1.Image = global::Examen.U1.Properties.Resources._2_banner_height_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(528, 371);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(179, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // btnMedical
             // 
@@ -55,6 +99,21 @@
             this.btnMedical.TabIndex = 0;
             this.btnMedical.Text = "Medical";
             this.btnMedical.UseVisualStyleBackColor = false;
+            // 
+            // btnCitas
+            // 
+            this.btnCitas.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCitas.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCitas.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnCitas.Location = new System.Drawing.Point(133, 347);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCitas.Name = "btnCitas";
+            this.btnCitas.Size = new System.Drawing.Size(150, 162);
+            this.btnCitas.TabIndex = 5;
+            this.btnCitas.Text = "Citas";
+            this.btnCitas.UseVisualStyleBackColor = false;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
             // btnAcerca
             // 
@@ -86,36 +145,6 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnCitas
-            // 
-            this.btnCitas.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCitas.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCitas.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.btnCitas.Location = new System.Drawing.Point(133, 347);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(150, 162);
-            this.btnCitas.TabIndex = 5;
-            this.btnCitas.Text = "Citas";
-            this.btnCitas.UseVisualStyleBackColor = false;
-            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
-            // 
-            // btnNosotros
-            // 
-            this.btnNosotros.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnNosotros.Enabled = false;
-            this.btnNosotros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNosotros.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNosotros.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.btnNosotros.Location = new System.Drawing.Point(288, 180);
-            this.btnNosotros.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNosotros.Name = "btnNosotros";
-            this.btnNosotros.Size = new System.Drawing.Size(150, 162);
-            this.btnNosotros.TabIndex = 4;
-            this.btnNosotros.Text = "Nosotros";
-            this.btnNosotros.UseVisualStyleBackColor = false;
-            // 
             // btnPacientes
             // 
             this.btnPacientes.BackColor = System.Drawing.Color.MidnightBlue;
@@ -130,35 +159,6 @@
             this.btnPacientes.Text = "Pacientes";
             this.btnPacientes.UseVisualStyleBackColor = false;
             this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.AliceBlue;
-            this.pictureBox1.Image = global::Examen.U1.Properties.Resources._2_banner_height_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(528, 371);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // grdp
-            // 
-            this.grdp.BackColor = System.Drawing.Color.Transparent;
-            this.grdp.ColorButtom = System.Drawing.Color.LightCyan;
-            this.grdp.ColorTop = System.Drawing.Color.MidnightBlue;
-            this.grdp.Controls.Add(this.btnNosotros);
-            this.grdp.Controls.Add(this.pictureBox1);
-            this.grdp.Controls.Add(this.btnMedical);
-            this.grdp.Controls.Add(this.btnCitas);
-            this.grdp.Controls.Add(this.btnAcerca);
-            this.grdp.Controls.Add(this.btnSalir);
-            this.grdp.Controls.Add(this.btnPacientes);
-            this.grdp.Location = new System.Drawing.Point(-1, -1);
-            this.grdp.Name = "grdp";
-            this.grdp.Size = new System.Drawing.Size(800, 550);
-            this.grdp.TabIndex = 7;
             // 
             // frmPrincipal
             // 
@@ -177,8 +177,8 @@
             this.Text = "Ventana principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grdp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

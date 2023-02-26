@@ -39,6 +39,11 @@ namespace Examen.U1
             frmCitas.Show();
         }
 
+        private void btnNosotros_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.gob.mx/imss");
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
