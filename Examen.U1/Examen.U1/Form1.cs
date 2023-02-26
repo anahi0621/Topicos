@@ -54,5 +54,34 @@ namespace Examen.U1
             Application.Exit();
         }
 
+        private void frmPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.P)
+            {
+                MessageBox.Show("CONTROL + P");
+
+                this.Hide();
+
+                frmPacientes = new frmPacientes();
+                frmPacientes.Show();
+            }
+
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                MessageBox.Show("CONTROL + C");
+
+                this.Hide();
+
+                frmCitas = new frmCitas();
+                frmCitas.Show();
+            }
+
+            if (e.Control && e.KeyCode == Keys.N)
+            {
+                MessageBox.Show("CONTROL + N");
+
+                System.Diagnostics.Process.Start("https://www.gob.mx/imss");
+            }
+        }
     }
 }

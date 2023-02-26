@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.grdp = new Plantilla.GradientPanel();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnNosotros = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMedical = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.btnAcerca = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnPacientes = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.grdp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,19 @@
             this.grdp.Name = "grdp";
             this.grdp.Size = new System.Drawing.Size(800, 620);
             this.grdp.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Himalaya", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label7.Location = new System.Drawing.Point(12, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(248, 48);
+            this.label7.TabIndex = 40;
+            this.label7.Tag = "";
+            this.label7.Text = "Ventana principal";
             // 
             // btnNosotros
             // 
@@ -162,19 +175,6 @@
             this.btnPacientes.UseVisualStyleBackColor = false;
             this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Himalaya", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label7.Location = new System.Drawing.Point(12, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(248, 48);
-            this.label7.TabIndex = 40;
-            this.label7.Tag = "";
-            this.label7.Text = "Ventana principal";
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +184,7 @@
             this.Controls.Add(this.grdp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -192,6 +193,7 @@
             this.Text = "Ventana principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmPrincipal_KeyDown);
             this.grdp.ResumeLayout(false);
             this.grdp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

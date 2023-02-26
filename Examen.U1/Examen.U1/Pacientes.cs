@@ -149,9 +149,12 @@ namespace Examen.U1
                             ((TextBox)sender).ForeColor = Color.Red;
                             ((TextBox)sender).Font = new Font(((TextBox)sender).Font.FontFamily, 12);
 
-                            MessageBox.Show("INTRODUCE UN CODIGO VALIDO \n" +
-                                "DEBE CONTENER:\n" +
-                                "-NUMERO DE 6 DIGITOS");
+                            MessageBox.Show("Por favor: Introduce un codigo valido\n" +
+                                "Debe contener:\n" +
+                                "-Número de 6 digitos",
+                                "Código erroneo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -170,9 +173,12 @@ namespace Examen.U1
                             ((TextBox)sender).ForeColor = Color.Red;
                             ((TextBox)sender).Font = new Font(((TextBox)sender).Font.FontFamily, 12);
 
-                            MessageBox.Show("INTRODUCE UN NOMBRE VALIDO \n" +
-                                "DEBE CONTENER:\n" +
-                                "-MINIMO 12 CARACTERES");
+                            MessageBox.Show("Por favor: Introduce un nombre valido\n" +
+                                "Debe contener:\n" +
+                                "-Minimo 12 caracteres",
+                                "Nombre erroneo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -191,9 +197,12 @@ namespace Examen.U1
                             ((TextBox)sender).ForeColor = Color.Red;
                             ((TextBox)sender).Font = new Font(((TextBox)sender).Font.FontFamily, 12);
 
-                            MessageBox.Show("INTRODUCE UNA EDAD VALIDA \n" +
-                                "DEBE CONTENER:\n" +
-                                "-EDAD ENTRE 0 Y 100");
+                            MessageBox.Show("Por favor: Introduce una edad valida \n" +
+                                "Debe contener:\n" +
+                                "-Edad entre 0 años y 100 años",
+                                "Edad erronea",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -212,9 +221,12 @@ namespace Examen.U1
                             ((ComboBox)sender).ForeColor = Color.Red;
                             ((ComboBox)sender).Font = new Font(((ComboBox)sender).Font.FontFamily, 12);
 
-                            MessageBox.Show("SELECCIONE UNA OPCION VALIDA \n" +
-                                "DEBE CONTENER:\n" +
-                                "-UNA OPCION LISTADA");
+                            MessageBox.Show("Por favor: Seleccione una opción valida\n" +
+                                "Debe contener:\n" +
+                                "-Una opción de las listadas",
+                                "Opción no valida",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -237,12 +249,23 @@ namespace Examen.U1
             if (entradaDatos[0] == 1 && entradaDatos[1] == 1 && entradaDatos[2] == 1 && entradaDatos[3] == 1)
             {
                 dtgvRegistros.Rows.Add(txtboxCodigo.Text, txtboxNombre.Text, txtboxEdad.Text, cmbDiagnostico.Text);
+
+                MessageBox.Show("Paciente:\n" +
+                    "Su cita ha sido registrada\n" +
+                    "con el código: " + txtboxCodigo.Text, 
+                    "Cita realizada correctamente",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Question);
             }
             else
             {
-                MessageBox.Show("INGRESE CORRECTAMENTE LA INFORMACION SOLICITADA ANTES DE AGREGARLA");
+                MessageBox.Show("Por favor:\n" +
+                    "Ingrese correctamente la informacion solicitada\n" +
+                    "antes de agregarla a los registros\n",
+                    "Completar información",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
             }
-            
         }
         
         private void btnActualizar_Click(object sender, EventArgs e)
