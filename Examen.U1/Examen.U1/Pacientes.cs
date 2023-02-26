@@ -13,7 +13,7 @@ namespace Examen.U1
     public partial class frmPacientes : Form
     {
         //instancia del formulario principal
-        frmPrincipal frmPrincipal;
+        frmPrincipal frmPrincipal = new frmPrincipal();
         int[] entradaDatos = {0,0,0,0};
 
         //variables globales
@@ -49,7 +49,6 @@ namespace Examen.U1
 
             }
 
-            frmPrincipal = new frmPrincipal();
             frmPrincipal.Show();
         }
 

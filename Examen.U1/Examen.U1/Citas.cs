@@ -13,7 +13,7 @@ namespace Examen.U1
     public partial class frmCitas : Form
     {
         //instancia del formulario principal
-        frmPrincipal frmPrincipal;
+        frmPrincipal frmPrincipal = new frmPrincipal();
 
         public frmCitas()
         {
@@ -44,7 +44,6 @@ namespace Examen.U1
 
             }
 
-            frmPrincipal = new frmPrincipal();
             frmPrincipal.Show();
         }
 
