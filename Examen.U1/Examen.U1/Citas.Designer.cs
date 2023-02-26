@@ -41,9 +41,7 @@
             this.txtboxNombre = new System.Windows.Forms.TextBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.nudMinuto = new System.Windows.Forms.NumericUpDown();
             this.dtgv = new System.Windows.Forms.DataGridView();
-            this.nudHora = new System.Windows.Forms.NumericUpDown();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,11 +60,11 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpHora = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.grdp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMinuto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHora)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -151,6 +149,7 @@
             this.txtboxCodigo.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.txtboxCodigo.Location = new System.Drawing.Point(98, 9);
             this.txtboxCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtboxCodigo.MaxLength = 6;
             this.txtboxCodigo.Name = "txtboxCodigo";
             this.txtboxCodigo.Size = new System.Drawing.Size(200, 36);
             this.txtboxCodigo.TabIndex = 15;
@@ -202,6 +201,7 @@
             this.txtboxNombre.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.txtboxNombre.Location = new System.Drawing.Point(98, 54);
             this.txtboxNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtboxNombre.MaxLength = 35;
             this.txtboxNombre.Name = "txtboxNombre";
             this.txtboxNombre.Size = new System.Drawing.Size(200, 36);
             this.txtboxNombre.TabIndex = 17;
@@ -232,18 +232,6 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Fecha:";
             // 
-            // nudMinuto
-            // 
-            this.nudMinuto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
-            this.nudMinuto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudMinuto.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudMinuto.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.nudMinuto.Location = new System.Drawing.Point(155, 145);
-            this.nudMinuto.Margin = new System.Windows.Forms.Padding(2);
-            this.nudMinuto.Name = "nudMinuto";
-            this.nudMinuto.Size = new System.Drawing.Size(53, 36);
-            this.nudMinuto.TabIndex = 33;
-            // 
             // dtgv
             // 
             this.dtgv.AllowUserToDeleteRows = false;
@@ -271,28 +259,20 @@
             this.dtgv.Size = new System.Drawing.Size(458, 214);
             this.dtgv.TabIndex = 24;
             // 
-            // nudHora
-            // 
-            this.nudHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
-            this.nudHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudHora.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudHora.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.nudHora.Location = new System.Drawing.Point(98, 145);
-            this.nudHora.Margin = new System.Windows.Forms.Padding(2);
-            this.nudHora.Name = "nudHora";
-            this.nudHora.Size = new System.Drawing.Size(53, 36);
-            this.nudHora.TabIndex = 32;
-            // 
             // dtpFecha
             // 
             this.dtpFecha.CalendarMonthBackground = System.Drawing.Color.LightSteelBlue;
             this.dtpFecha.CustomFormat = "dd-MM-yyyy";
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(98, 100);
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFecha.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
+            this.dtpFecha.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 36);
             this.dtpFecha.TabIndex = 31;
+            this.dtpFecha.Enter += new System.EventHandler(this.dtpFecha_Enter);
             // 
             // btnSalir
             // 
@@ -324,12 +304,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
+            this.panel1.Controls.Add(this.dtpHora);
             this.panel1.Controls.Add(this.txtboxNombre);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.dtpFecha);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.nudHora);
-            this.panel1.Controls.Add(this.nudMinuto);
             this.panel1.Controls.Add(this.txtboxCodigo);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -351,6 +330,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
+            this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label8);
@@ -379,9 +359,9 @@
             this.label9.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.label9.Location = new System.Drawing.Point(27, 42);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 29);
+            this.label9.Size = new System.Drawing.Size(113, 29);
             this.label9.TabIndex = 1;
-            this.label9.Text = "Descripción";
+            this.label9.Text = "Descripción:";
             // 
             // label12
             // 
@@ -475,6 +455,32 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // dtpHora
+            // 
+            this.dtpHora.CalendarMonthBackground = System.Drawing.Color.LightSteelBlue;
+            this.dtpHora.CustomFormat = "HH:mm";
+            this.dtpHora.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHora.Location = new System.Drawing.Point(98, 141);
+            this.dtpHora.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpHora.Name = "dtpHora";
+            this.dtpHora.ShowUpDown = true;
+            this.dtpHora.Size = new System.Drawing.Size(200, 36);
+            this.dtpHora.TabIndex = 34;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(146, 36);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 37);
+            this.comboBox1.TabIndex = 8;
+            // 
             // frmCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,9 +501,7 @@
             this.grdp.ResumeLayout(false);
             this.grdp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMinuto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHora)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -520,8 +524,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.NumericUpDown nudHora;
-        private System.Windows.Forms.NumericUpDown nudMinuto;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label5;
@@ -543,5 +545,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DateTimePicker dtpHora;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

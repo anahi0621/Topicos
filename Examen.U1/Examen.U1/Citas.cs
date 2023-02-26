@@ -20,6 +20,8 @@ namespace Examen.U1
             InitializeComponent();
 
             this.grdp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            dtpFecha.MinDate = DateTime.Now;
+            dtpHora.MinDate = DateTime.Now;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -47,6 +49,11 @@ namespace Examen.U1
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFecha_Enter(object sender, EventArgs e)
         {
 
         }
