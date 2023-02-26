@@ -18,6 +18,8 @@ namespace Examen.U1
         public frmCitas()
         {
             InitializeComponent();
+
+            this.grdp.Anchor = System.Windows.Forms.AnchorStyles.None;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -48,7 +50,5 @@ namespace Examen.U1
         {
 
         }
-
-
     }
 }

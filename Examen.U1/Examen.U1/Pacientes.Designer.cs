@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPacientes));
             this.dtgvRegistros = new System.Windows.Forms.DataGridView();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -43,8 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtboxEdad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnVerOcultar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.lblPromedio = new System.Windows.Forms.Label();
@@ -54,10 +50,16 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diagnostico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdp = new Plantilla.GradientPanel();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.grdp.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgvRegistros
@@ -89,40 +91,11 @@
             this.dtgvRegistros.TabIndex = 10;
             this.dtgvRegistros.TabStop = false;
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.btnEliminar.Location = new System.Drawing.Point(11, 357);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(120, 30);
-            this.btnEliminar.TabIndex = 6;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.btnSalir.Location = new System.Drawing.Point(176, 357);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(120, 30);
-            this.btnSalir.TabIndex = 7;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Azure;
+            this.pictureBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.pictureBox1.Image = global::Examen.U1.Properties.Resources._2_banner_height_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(709, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(766, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(130, 100);
@@ -133,8 +106,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Himalaya", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 3);
+            this.label7.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label7.Location = new System.Drawing.Point(10, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(141, 48);
             this.label7.TabIndex = 39;
@@ -156,7 +131,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Himalaya", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(12, 54);
+            this.groupBox1.Location = new System.Drawing.Point(18, 72);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(455, 238);
             this.groupBox1.TabIndex = 41;
@@ -283,43 +258,13 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "Edad:";
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.btnActualizar.Location = new System.Drawing.Point(176, 310);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(120, 30);
-            this.btnActualizar.TabIndex = 5;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.btnAgregar.Location = new System.Drawing.Point(11, 310);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(120, 30);
-            this.btnAgregar.TabIndex = 4;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
             // btnVerOcultar
             // 
             this.btnVerOcultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
-            this.btnVerOcultar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVerOcultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerOcultar.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerOcultar.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.btnVerOcultar.Location = new System.Drawing.Point(495, 110);
+            this.btnVerOcultar.Location = new System.Drawing.Point(489, 119);
             this.btnVerOcultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerOcultar.Name = "btnVerOcultar";
             this.btnVerOcultar.Size = new System.Drawing.Size(120, 30);
@@ -331,10 +276,10 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.button4.Location = new System.Drawing.Point(495, 63);
+            this.button4.Location = new System.Drawing.Point(489, 72);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 30);
@@ -370,7 +315,7 @@
             this.groupBox3.Controls.Add(this.dtgvRegistros);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Himalaya", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox3.Location = new System.Drawing.Point(469, 292);
+            this.groupBox3.Location = new System.Drawing.Point(475, 310);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(437, 284);
             this.groupBox3.TabIndex = 43;
@@ -406,22 +351,92 @@
             this.Diagnostico.Name = "Diagnostico";
             this.Diagnostico.ReadOnly = true;
             // 
+            // grdp
+            // 
+            this.grdp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.grdp.ColorButtom = System.Drawing.Color.LightCyan;
+            this.grdp.ColorTop = System.Drawing.Color.MidnightBlue;
+            this.grdp.Controls.Add(this.btnActualizar);
+            this.grdp.Controls.Add(this.label7);
+            this.grdp.Controls.Add(this.btnVerOcultar);
+            this.grdp.Controls.Add(this.groupBox3);
+            this.grdp.Controls.Add(this.button4);
+            this.grdp.Controls.Add(this.btnAgregar);
+            this.grdp.Controls.Add(this.pictureBox1);
+            this.grdp.Controls.Add(this.groupBox1);
+            this.grdp.Controls.Add(this.btnSalir);
+            this.grdp.Controls.Add(this.btnEliminar);
+            this.grdp.Location = new System.Drawing.Point(2, 0);
+            this.grdp.Name = "grdp";
+            this.grdp.Size = new System.Drawing.Size(1000, 650);
+            this.grdp.TabIndex = 44;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnActualizar.Location = new System.Drawing.Point(183, 331);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(120, 30);
+            this.btnActualizar.TabIndex = 9;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnAgregar.Location = new System.Drawing.Point(18, 331);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(120, 30);
+            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnSalir.Location = new System.Drawing.Point(183, 378);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(120, 30);
+            this.btnSalir.TabIndex = 11;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnEliminar.Location = new System.Drawing.Point(18, 378);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(120, 30);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
             // frmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(224)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(909, 573);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnVerOcultar);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnEliminar);
+            this.ClientSize = new System.Drawing.Size(984, 611);
+            this.Controls.Add(this.grdp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -438,15 +453,14 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.grdp.ResumeLayout(false);
+            this.grdp.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView dtgvRegistros;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -458,8 +472,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtboxEdad;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnVerOcultar;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label lblPromedio;
@@ -469,5 +481,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Diagnostico;
+        private Plantilla.GradientPanel grdp;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

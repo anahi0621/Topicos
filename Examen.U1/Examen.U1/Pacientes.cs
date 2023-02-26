@@ -23,6 +23,8 @@ namespace Examen.U1
             InitializeComponent();
 
             cmbDiagnostico.SelectedIndex = 0;
+
+            this.grdp.Anchor = System.Windows.Forms.AnchorStyles.None;
         }
 
         //evento click del boton "salir"
@@ -109,7 +111,7 @@ namespace Examen.U1
             if (entradaDatos[indiceEntradaDatos] == 0)
             {
                 ((Control)sender).Text = "";
-                ((Control)sender).ForeColor = Color.Black;
+                ((Control)sender).ForeColor = Color.LightSteelBlue;
                 ((Control)sender).Font = new Font(((Control)sender).Font.FontFamily, 22);
             }
         }

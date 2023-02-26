@@ -20,6 +20,7 @@ namespace Examen.U1
         {
             InitializeComponent();
 
+            this.grdp.Anchor = System.Windows.Forms.AnchorStyles.None;
         }
 
         private void btnPacientes_Click(object sender, EventArgs e)
