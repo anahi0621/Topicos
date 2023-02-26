@@ -253,14 +253,22 @@ namespace Examen.U1
         {
             int suma = 0;
 
-            for (int i = 0; i < cantidadRegistros; ++i)
+            try
             {
-                suma += Convert.ToInt32(dtgvRegistros.Rows[i].Cells[2].Value);
+                for (int i = 0; i < cantidadRegistros; ++i)
+                {
+                    suma += Convert.ToInt32(dtgvRegistros.Rows[i].Cells[2].Value);
+                }
+
+                int promedio = suma / cantidadRegistros;
+
+                lblPromedio.Text = "Promedio: " + Convert.ToString(promedio);
             }
+            catch(Exception)
+            {
 
-            int promedio = suma / cantidadRegistros;
-
-            lblPromedio.Text = "Promedio: " + Convert.ToString(promedio);
+            }
+            
         }
 
         private void btnVerOcultar_Click(object sender, EventArgs e)
