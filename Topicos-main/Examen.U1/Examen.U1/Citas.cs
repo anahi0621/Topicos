@@ -65,6 +65,17 @@ namespace Examen.U1
 
             dtgv.Rows.Add(txtboxCodigo.Text, txtboxNombre.Text, dtpFecha.Text, dtpHora.Text);
 
+            Random Random = new Random();
+            int codigo = Random.Next(100000,999999);
+
+            lblConfirmacion.Text = Convert.ToString(codigo);
+
+            MessageBox.Show("Paciente:\n" +
+                "Su cita ha sido registrada\n" +
+                "con el código de confirmacion: " + codigo,
+                "Cita realizada correctamente",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Question);
         }
 
         private void txtboxCodigo_KeyPress(object sender, KeyPressEventArgs e)
@@ -146,37 +157,51 @@ namespace Examen.U1
                 lblCostos.Text = "100";
             }
 
-            //if (label15.Text != "500")
-            //{
-            //    if (comboBox1.SelectedIndex == 1)
-            //    {
-
-
-
-            //        label15.Text = "500";
-
-            //    }
-            //    else
-            //    {
-            //        label13.Text = label13.Text+ (float.Parse(textBox1.Text)* 500).ToString();
-            //    }
-            //}
-
+            CalcularTotal();
         }
 
         private void nudUnidades_ValueChanged(object sender, EventArgs e)
         {
+            CalcularTotal();
+        }
+
+        private void CalcularTotal()
+        {
             try
             {
-                int total = Convert.ToInt32(lblCostos.Text) * Convert.ToInt32(nudUnidades.Text);
+                decimal costo = Convert.ToDecimal(lblCostos.Text);
+                decimal unidades = Convert.ToDecimal(txtboxUnidades.Text);
+
+                decimal total = costo * unidades;
 
                 lblTotal.Text = Convert.ToString(total);
+            }
+            catch (Exception)
+            {
+                lblTotal.Text = "";
+            }
+        }
+
+        private void txtboxUnidades_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtboxUnidades_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal costo = Convert.ToDecimal(lblCostos.Text);
+                decimal unidades = Convert.ToDecimal(txtboxUnidades.Text);
+
+                CalcularTotal();
             }
             catch(Exception)
             {
 
             }
 
+            
         }
     }
  }

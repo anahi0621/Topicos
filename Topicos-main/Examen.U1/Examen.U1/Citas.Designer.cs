@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCitas));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.grdp = new Plantilla.GradientPanel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtboxUnidades = new System.Windows.Forms.TextBox();
             this.lblCostos = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.cmbDescripcion = new System.Windows.Forms.ComboBox();
@@ -60,19 +63,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblConfirmacion = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.nudUnidades = new System.Windows.Forms.NumericUpDown();
             this.grdp.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUnidades)).BeginInit();
             this.SuspendLayout();
             // 
             // grdp
@@ -86,7 +87,7 @@
             this.grdp.Controls.Add(this.panel1);
             this.grdp.Controls.Add(this.label7);
             this.grdp.Controls.Add(this.pictureBox1);
-            this.grdp.Controls.Add(this.label6);
+            this.grdp.Controls.Add(this.lblConfirmacion);
             this.grdp.Controls.Add(this.label5);
             this.grdp.Controls.Add(this.btnCancelar);
             this.grdp.Controls.Add(this.btnGenerar);
@@ -124,7 +125,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
-            this.panel3.Controls.Add(this.nudUnidades);
+            this.panel3.Controls.Add(this.txtboxUnidades);
             this.panel3.Controls.Add(this.lblCostos);
             this.panel3.Controls.Add(this.lblTotal);
             this.panel3.Controls.Add(this.cmbDescripcion);
@@ -138,12 +139,26 @@
             this.panel3.Size = new System.Drawing.Size(343, 218);
             this.panel3.TabIndex = 41;
             // 
+            // txtboxUnidades
+            // 
+            this.txtboxUnidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(46)))), ((int)(((byte)(92)))));
+            this.txtboxUnidades.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxUnidades.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxUnidades.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.txtboxUnidades.Location = new System.Drawing.Point(146, 133);
+            this.txtboxUnidades.MaxLength = 2;
+            this.txtboxUnidades.Name = "txtboxUnidades";
+            this.txtboxUnidades.Size = new System.Drawing.Size(57, 36);
+            this.txtboxUnidades.TabIndex = 45;
+            this.txtboxUnidades.TextChanged += new System.EventHandler(this.txtboxUnidades_TextChanged);
+            this.txtboxUnidades.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtboxUnidades_KeyPress);
+            // 
             // lblCostos
             // 
             this.lblCostos.AutoSize = true;
             this.lblCostos.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCostos.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.lblCostos.Location = new System.Drawing.Point(141, 87);
+            this.lblCostos.Location = new System.Drawing.Point(146, 87);
             this.lblCostos.Name = "lblCostos";
             this.lblCostos.Size = new System.Drawing.Size(23, 29);
             this.lblCostos.TabIndex = 11;
@@ -154,7 +169,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.lblTotal.Location = new System.Drawing.Point(236, 167);
+            this.lblTotal.Location = new System.Drawing.Point(237, 179);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(68, 29);
             this.lblTotal.TabIndex = 10;
@@ -184,7 +199,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label16.Location = new System.Drawing.Point(172, 167);
+            this.label16.Location = new System.Drawing.Point(172, 179);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(59, 29);
             this.label16.TabIndex = 7;
@@ -470,18 +485,18 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
+            // lblConfirmacion
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label6.Location = new System.Drawing.Point(150, 382);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 29);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "0 0 0 0 0 0";
+            this.lblConfirmacion.AutoSize = true;
+            this.lblConfirmacion.BackColor = System.Drawing.Color.Transparent;
+            this.lblConfirmacion.Font = new System.Drawing.Font("Microsoft Himalaya", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmacion.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.lblConfirmacion.Location = new System.Drawing.Point(150, 382);
+            this.lblConfirmacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfirmacion.Name = "lblConfirmacion";
+            this.lblConfirmacion.Size = new System.Drawing.Size(98, 29);
+            this.lblConfirmacion.TabIndex = 37;
+            this.lblConfirmacion.Text = "0 0 0 0 0 0";
             // 
             // label5
             // 
@@ -541,14 +556,6 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // nudUnidades
-            // 
-            this.nudUnidades.Location = new System.Drawing.Point(146, 134);
-            this.nudUnidades.Name = "nudUnidades";
-            this.nudUnidades.Size = new System.Drawing.Size(120, 20);
-            this.nudUnidades.TabIndex = 44;
-            this.nudUnidades.ValueChanged += new System.EventHandler(this.nudUnidades_ValueChanged);
-            // 
             // frmCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -576,7 +583,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUnidades)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -596,7 +602,7 @@
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblConfirmacion;
         private System.Windows.Forms.Label label7;
         private Plantilla.GradientPanel grdp;
         private System.Windows.Forms.Panel panel2;
@@ -619,6 +625,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblCostos;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.NumericUpDown nudUnidades;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox txtboxUnidades;
     }
 }
