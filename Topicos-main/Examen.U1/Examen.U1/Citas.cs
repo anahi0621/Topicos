@@ -23,7 +23,7 @@ namespace Examen.U1
 
             this.grdp.Anchor = System.Windows.Forms.AnchorStyles.None;
             dtpFecha.MinDate = DateTime.Now;
-            dtpHora.MinDate = DateTime.Now;
+            dtpHora.Value = DateTime.Now;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -129,22 +129,52 @@ namespace Examen.U1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
-            if (label15.Text != "500")
+            if (cmbDescripcion.SelectedIndex == 0)
             {
-                if (comboBox1.SelectedIndex == 1)
-                {
+                lblCostos.Text = "120,000";
+            }
+            else if(cmbDescripcion.SelectedIndex == 1)
+            {
+                lblCostos.Text = "500";
+            }
+            else if (cmbDescripcion.SelectedIndex == 2)
+            {
+                lblCostos.Text = "200";
+            }
+            else if (cmbDescripcion.SelectedIndex == 3)
+            {
+                lblCostos.Text = "100";
+            }
+
+            //if (label15.Text != "500")
+            //{
+            //    if (comboBox1.SelectedIndex == 1)
+            //    {
 
 
-                 
-                    label15.Text = "500";
-                   
-                }
-                else
-                {
-                    label13.Text = label13.Text+ (float.Parse(textBox1.Text)* 500).ToString();
-                }
+
+            //        label15.Text = "500";
+
+            //    }
+            //    else
+            //    {
+            //        label13.Text = label13.Text+ (float.Parse(textBox1.Text)* 500).ToString();
+            //    }
+            //}
+
+        }
+
+        private void nudUnidades_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int total = Convert.ToInt32(lblCostos.Text) * Convert.ToInt32(nudUnidades.Text);
+
+                lblTotal.Text = Convert.ToString(total);
+            }
+            catch(Exception)
+            {
+
             }
 
         }

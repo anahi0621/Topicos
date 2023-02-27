@@ -36,3 +36,15 @@ C:\Users\DELL\OneDrive\Escritorio\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Exa
 C:\Users\DELL\OneDrive\Escritorio\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.csproj.CoreCompileInputs.cache
 C:\Users\DELL\OneDrive\Escritorio\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.exe
 C:\Users\DELL\OneDrive\Escritorio\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.pdb
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\bin\Debug\Examen.U1.exe.config
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\bin\Debug\Examen.U1.exe
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\bin\Debug\Examen.U1.pdb
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.csproj.AssemblyReference.cache
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.frmCitas.resources
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.frmPrincipal.resources
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.frmPacientes.resources
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.Properties.Resources.resources
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.csproj.GenerateResource.cache
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.csproj.CoreCompileInputs.cache
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.exe
+C:\Users\roman\Source\Repos\Topicos\Topicos-main\Examen.U1\Examen.U1\obj\Debug\Examen.U1.pdb
