@@ -17,6 +17,8 @@ namespace ExamenU2_HernandezAnahi
         public frmPrincipal()
         {
             InitializeComponent();
+
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
         }
 
         private void txtClaveProyecto_KeyPress(object sender, KeyPressEventArgs e)
