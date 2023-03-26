@@ -1,24 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ExamenU2_HernandezAnahi
 {
     public partial class frmPrincipal : Form
     {
+        frmInformacion frm;
+
        
 
         public frmPrincipal()
         {
             InitializeComponent();
 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnl1.Anchor = System.Windows.Forms.AnchorStyles.None;
         }
 
         private void txtClaveProyecto_KeyPress(object sender, KeyPressEventArgs e)
@@ -28,6 +23,10 @@ namespace ExamenU2_HernandezAnahi
         private void txtCodigo_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+            MessageBox.Show("Usuario:\n" +
+              "no ingrese letras\n" +
+              MessageBoxButtons.OK);
         }
 
         private void txtNombre_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -39,11 +38,6 @@ namespace ExamenU2_HernandezAnahi
         private void txtClaveProyecto_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btnVerificar_Click_1(object sender, EventArgs e)
@@ -61,6 +55,40 @@ namespace ExamenU2_HernandezAnahi
                 MessageBoxIcon.Question);
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTiposUsuario.SelectedIndex == 0)
+            {
+               
+            }
+            else if (cmbTiposUsuario.SelectedIndex == 1)
+            {
+               
+            }
+            else if (cmbTiposUsuario.SelectedIndex == 2)
+            {
+                
+           
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Usuario:\n" +
+                "Se cerrara la aplicacion\n" +
+                MessageBoxButtons.OK);
+
+            this.Close();
+        }
+
+        private void btninformacionusuarios_Click(object sender, EventArgs e)
+        {
+            
+           this.Hide();
+            frm = new frmInformacion();
+            frm.Show();
+        }
     }
-    }
+}
 
